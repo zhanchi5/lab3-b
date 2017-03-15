@@ -8,10 +8,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    unsigned int n,k,mark;
-
-   // cout << "Введите количество студентов: ";
-    //cin >> n;
+    unsigned int k,mark;
 
 
     string student_surname, student_name, student_second;
@@ -28,7 +25,6 @@ int main(int argc, char* argv[])
     cout << "Введите отчество студента:" <<endl;
     cin >> student_second;
 
-    // Добавление оценок студента в вектор
     cout << "Введите количесво оценок:";
     cin >> k;
 
@@ -40,22 +36,11 @@ int main(int argc, char* argv[])
     }
 
 
-
-    /*for (unsigned int i =0; i < n; ++i)
-    {
-
-    }*/
-
-
-    // Создание объекта класса student
     student *stud = new student(student_surname, student_name, student_second, scores);
 
-    // Вывод полного имени студента (используется унаследованный метод класса human)
     cout << stud->get_full_name() << endl;
-    // Вывод среднего балла студента
     cout << "Средний балл: " << stud->get_average_score() << endl;
 
-    // Количество учебных часов преподавателя
     unsigned int teacher_work_time;
     cout << "Введите фамилию преподавателя:" << endl;
     cin >> teacher_surname;
